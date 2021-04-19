@@ -21,7 +21,7 @@ body{
 .header2{
     margin:0px;
     height: 30vh;
-    background-image: url('img/header4.jpg');
+    background-image: url('img/header.jpg');
     padding: 10vh;
 }
 .header2 h1{
@@ -42,58 +42,68 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.cap_image{
+.coffee_image{
     height : 15vh; 
 
 }
-.product{
-    font-family: 'Open Sans', sans-serif;
-    background-color: white;
-    width: 80vw;
-    height: 15vh;
-    display:flex;
+.two_product{
+    display: flex;
     flex-direction: row;
-    margin-bottom: 5vh;
-    padding: 1vh 2vw;
+    justify-content: space-evenly;
+}
+.product{
+    background-color: white;
+    width: 40vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2vh 2vw;
+    padding: 2vh 2vw;
     border-radius: 2vh;
 }
-.product h3{
-    vertical-align: top;
-    font-size: 25px;
-    font-weight:700;
-    color: rgb(109, 100, 100);
-    margin-top: 0vh;
-    margin-bottom: 0px;
-    margin-left: 7vw;
-}
-.description{
-    font-size: 17px;
-    margin-left: 4vw;
-    margin-top: 1vh;
-    margin-bottom: 0vh;
-}
-.text{
-    width: 60vw;
-}
-.attribute{
+.upper{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 1vh;
-    margin-bottom: 2vh;
 }
-.price{
-    font-size: 23px;
-    font-weight: 700;
-    margin: 2vh 2vw;
-    color:rgb(13, 97, 27);
+.lower{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
 .intensity{
-    margin: 2vh 0vw 0vh 5vw;
-}
-.intensity img{
-    height: 4vh;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
 .intensity p{
-    margin-top: 1vh;
+    margin: 1vh 0vw;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+
+}
+.price{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    color:rgb(34, 136, 34);
+}
+.text{
+    font-family: 'Open Sans', sans-serif;
+}
+.description{
+    width: 28vw;
+    margin-left: 1vh;
+}
+.name{
+    margin: 1vh 1vw 2vh 3vw;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(116, 109, 109);
+}
+.intensity_image{
+    height: 2vh;
 }
