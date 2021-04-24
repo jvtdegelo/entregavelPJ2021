@@ -29,7 +29,7 @@ function create_intensity(data){
     
     var int_image = document.createElement("img");
     int_image.className = "intensity_image";
-    int_image.src = "img/intensidade" + data.intensidade + ".png";
+    int_image.src = "img/intensidade/intensidade" + data.intensidade + ".png";
     int_image.alt = "Intensidade: " + data.intensidade;
 
     div_intensity.appendChild(p_int);
@@ -84,6 +84,7 @@ function create_lower(data){
 function create_product(data){
     var div_product = document.createElement("div");
     div_product.className = "product";
+    div_product.id = data.id;
     
     var upper_child = create_upper(data);
     var lower_child = create_lower(data);
@@ -118,6 +119,20 @@ function create_one_product(data){
     return div_one_product;
 }
 
+function fill_footer_products(data){
+    var column = document.getElementById("footer_products");
+    for(var i=0; i<5 && i<data.length; i++){
+        var p = document.createElement("a");
+        p.href = "#" + data[i].id;
+        p.innerHTML = data[i].nome;
+        column.appendChild(p);
+    }
+    var p = document.createElement("a");
+    p.href = "#products";
+    p.innerHTML = "Ver todos";
+    column.appendChild(p);
+}
+
 
 const getData = (url) => {
     fetch(url)
@@ -128,15 +143,14 @@ const getData = (url) => {
             for(var i=0; i<responseData.length; i++){
                 responseData[i].preco = Number(responseData[i].preco).toLocaleString('pt-br', {minimumFractionDigits: 2});
             }
-
             var products = document.getElementById("products");
-            for(i=0; i< responseData.length; i+=2){
+            for(var i=0; i< responseData.length; i+=2){
                 var new_child;
                 if (i != responseData.length-1) new_child = create_two_product(responseData[i], responseData[i+1]);
                 else new_child = create_one_product(responseData[i]);
-
                 products.appendChild(new_child);
             }
+            fill_footer_products(responseData);
         });
 };
 getData("https://entregavel.polijrinternal.com/produtos/");

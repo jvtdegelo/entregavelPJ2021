@@ -6,13 +6,13 @@ body{
 .header1{
     width: 100%;
     font-family: 'Anton', sans-serif;
-    background-color: blanchedalmond;
+    background-color: rgba(255, 235, 205, 0.8);
     font-size: 30px;
     text-align: center;
     padding-top: 1vh;
     padding-bottom: 2vh;
     vertical-align: top;
-    position:fixed
+    position:fixed;
 }
 .link1{
     text-decoration: none;
@@ -35,7 +35,7 @@ body{
     color:white;
 }
 #products{
-    background-color: wheat;
+    background-color:wheat;
     padding: 5vh 5vw;
     display: flex;
     justify-content: space-evenly;
@@ -43,16 +43,22 @@ body{
     flex-direction: column;
 }
 .coffee_image{
-    height : 15vh; 
-
+    height: 15vh; 
+    width: auto;
 }
 .two_product{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
+.one_product{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .product{
-    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(255, 255, 255, 0.418);
     width: 40vw;
     display:flex;
     flex-direction: column;
@@ -81,18 +87,13 @@ body{
 }
 .intensity p{
     margin: 1vh 0vw;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
 
 }
 .price{
-    font-family: 'Noto Sans JP', sans-serif;
     font-size: 20px;
     font-weight: 900;
     color:rgb(34, 136, 34);
-}
-.text{
-    font-family: 'Open Sans', sans-serif;
 }
 .description{
     width: 28vw;
@@ -102,8 +103,65 @@ body{
     margin: 1vh 1vw 2vh 3vw;
     font-size: 25px;
     font-weight: 700;
-    color: rgb(116, 109, 109);
+    color:black;
 }
 .intensity_image{
-    height: 2vh;
+    height: 3.5vh;
+    width: auto;
+}
+.footer{
+    bottom: 0px;
+    width: 100%;
+    background-color: blanchedalmond;
+    color:black;
+}
+
+.rodape{
+    bottom: 0px;
+    font-size: 20px;
+    width: 100%;
+    color:black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.logo_rodape{
+    margin-left: 2vw;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+}
+.rodape h4{
+    margin-top: 15px;
+    font-size: smaller;
+}
+
+.coluna{
+    width: 30vh;
+    margin: 3vh 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer p{
+    font-size: 15px;
+    text-align: justify;
+    padding-bottom: 2vh;
+    margin-bottom: 0;
+}
+
+.informacoes_rodape a{
+    color:brown;
+    text-decoration: none;
+}
+#footer_products{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#footer_products a{
+    font-size: 15px;
+    margin: 0vh 1vw 2vh 1vw;
+    text-decoration: none;
+    color:brown;
 }
