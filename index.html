@@ -10,13 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/291375584b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>
         <div class="header1">
             <a href="#" class ="link1"><img src="img/logo.png" style="height:7vh;">Juni CAFE</a>
+            
         </div>
     </nav>
+    <input type = "checkbox" id = "check">
+      <label for = "check">
+      <i class = "fas fa-bars" id = "btn"></i>
+      <i class = "fas fa-times" id = "cancel"></i>
+    </label>
+    <div class="sidebar" >
+      <header>Produtos</header>
+      <ul id = "sidebar_ul">
+      </ul>
+    </div>
     <div class="header2">
         <h1>Mostruário</h1>
         <h2>Confira abaixo nossos produtos</h2>
@@ -55,6 +67,6 @@
         <p style="text-align: center;">All content in this site &copy; 2021 Juni CAFE | All rights reserved.</p>
       </div>
 
-    <script src="script.js"></script>
+    <script src="get_data.js"></script>
 </body>
 </html>

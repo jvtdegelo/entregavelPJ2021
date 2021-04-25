@@ -133,6 +133,17 @@ function fill_footer_products(data){
     column.appendChild(p);
 }
 
+function fill_sidebar(data){
+    var sidebar = document.getElementById("sidebar_ul");
+    for(var i = 0; i< data.length; i++){
+        var new_li = document.createElement("li");
+        var new_a = document.createElement("a");
+        new_a.href = "#"+ data[i].id;
+        new_a.innerHTML = data[i].nome;
+        new_li.appendChild(new_a);
+        sidebar.appendChild(new_li);
+    }
+}
 
 const getData = (url) => {
     fetch(url)
@@ -151,6 +162,7 @@ const getData = (url) => {
                 products.appendChild(new_child);
             }
             fill_footer_products(responseData);
+            fill_sidebar(responseData);
         });
 };
 getData("https://entregavel.polijrinternal.com/produtos/");
