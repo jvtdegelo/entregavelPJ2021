@@ -10,13 +10,18 @@ body{
     font-family: 'Anton', sans-serif;
     background-color: rgba(230, 204, 178, 0.9);
     font-size: 30px;
-    text-align: center;
     padding-top: 1vh;
     padding-bottom: 2vh;
     vertical-align: top;
     position:fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
 .link1{
+    position: center;
+    text-align: center;
     text-decoration: none;
     color: rgb(80, 78, 78);
 }
@@ -36,6 +41,30 @@ body{
     font-size: 30px;
     color:rgb(237, 224, 212);
 }
+.shop_cart{
+    position: fixed;
+    margin: 0;
+    width: 20vw;
+    left: 3vw;
+    top: 1vh;
+    display:flex;
+    flex-direction: row;
+}
+
+.shop_cart i{
+    font-size: 40px;
+    margin-top:1.5vh;
+}
+
+.shop_cart p {
+    font-family: 'Roboto', serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-top:2vh;
+    margin-left: 1vw;
+}
+
+
 #products{
     background-color:rgb(221,184,146);
     padding: 5vh 5vw;
@@ -60,7 +89,7 @@ body{
 }
 .product{
     font-family: 'Open Sans', sans-serif;
-    background-color: rgba(230, 204, 178);;
+    background-color: rgba(230, 204, 178);
     width: 40vw;
     display:flex;
     flex-direction: column;
@@ -93,9 +122,40 @@ body{
 
 }
 .price{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 900;
     color:rgb(34, 136, 34);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.price button{
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.price button:hover{
+    background-color: rgb(237, 224, 212);
+}
+
+.price i{
+    padding: 1vh 1vw;
+    font-size: 20px;
+    height: 3vh; 
+    width: auto;
+    color:black;
+}
+.quantity{
+    color:black;
+    font-size: 25px;
+    padding: 3vh 3vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .description{
     width: 28vw;
@@ -179,7 +239,7 @@ body{
     font-size: 28px;
     font-family: 'Roboto', serif;
     font-weight: 700;
-    color:blanchedalmond;
+    color:rgb(221,184,146);
     text-align: center;
     line-height: 11vh;
     user-select: none;

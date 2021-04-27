@@ -34,7 +34,6 @@ function create_intensity(data){
 
     div_intensity.appendChild(p_int);
     div_intensity.appendChild(int_image);
-
     return div_intensity;
 }
 
@@ -47,7 +46,42 @@ function create_price(data){
     p_price.appendChild(text_price);
     p_price.className = "text_price";
 
+    var div_cart = document.createElement("div");
+    div_cart.className = "price_cart";
+
+    var quantity = document.createElement("div");
+    quantity.className = "quantity"
+    var p_quant = document.createElement("p");
+    p_quant.innerHTML = "0";
+    p_quant.id = "quant" + data.id;
+    quantity.appendChild(p_quant);
+
+    var button = document.createElement("div");
+    button.className = "cart_button";
+    
+    var plus_button = document.createElement("button");
+    plus_button.onclick = function() {
+        add_to_cart(plus_button);
+    }
+    plus_button.className = "button" + data.id;
+    var plus_icon = document.createElement("i");
+    plus_icon.className = "fas fa-plus";
+
+    var minus_button = document.createElement("button");
+    minus_button.onclick = function() {
+        remove_from_cart(minus_button);
+    }
+    minus_button.className = "button" + data.id;
+    var minus_icon = document.createElement("i");
+    minus_icon.className = "fas fa-minus";
+
+    plus_button.appendChild(plus_icon);
+    minus_button.appendChild(minus_icon);
+    button.appendChild(plus_button);
+    button.appendChild(minus_button);
+    quantity.appendChild(button)
     div_price.appendChild(p_price);
+    div_price.appendChild(quantity);
 
     return div_price;
 }
